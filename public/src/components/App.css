@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0 auto;
+}
+
+li {
+    font-size: 2rem;
+    color: black;
+}
+
+button {
+    font-size: 2rem;
+    color: black
+}

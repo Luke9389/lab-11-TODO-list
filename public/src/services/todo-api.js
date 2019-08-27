@@ -1,8 +1,8 @@
 
 const URL = '/api';
 
-function fetchWithError(url, options) {
-    return fetch(url, options)
+function fetchWithError(url) {
+    return fetch(url)
         .then(response => {
             if(response.ok) {
                 return response.json();
@@ -15,8 +15,21 @@ function fetchWithError(url, options) {
         });
 }
 
-export function getTasks(options) {
-    const showAll = options && options.showAll;
-    const url = `${URL}/types${showAll ? '?show=all' : ''}`;
+export function getTasks() {
+    const url = `${URL}/tasks`;
     return fetchWithError(url);
 }
+
+export function addTask(task) {
+    const url = `${URL}/tasks`;
+    return fetchWithError(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(task)
+    });
+}
+
+
+
