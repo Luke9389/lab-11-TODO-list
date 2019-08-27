@@ -17,10 +17,12 @@ class TaskForm extends Component {
                 completed: false
             };
 
+            console.log(taskToAdd);
+
             error.textContent = '';
 
             onAdd(taskToAdd)
-                .them(() => {
+                .then(() => {
                     form.reset();
                     document.activeElement.blur();
                 })
@@ -37,6 +39,7 @@ class TaskForm extends Component {
                     <input name="task" required>
                     <button>Add</button>
                 </form>
+                <p class="error"></p>
             </section>
         `;
     }

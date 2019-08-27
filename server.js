@@ -35,7 +35,7 @@ app.get('/api/tasks', (req, res) => {
 
 });
 
-app.post('/api/types', (req, res) => {
+app.post('/api/tasks', (req, res) => {
     const task = req.body;
     client.query(`
         INSERT INTO tasks (name, completed)

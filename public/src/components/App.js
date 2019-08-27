@@ -11,8 +11,10 @@ class TODOList extends Component {
 
         const taskForm = new TaskForm({
             onAdd: task => {
+                console.log('task in app', task);
                 return addTask(task)
                     .then(saved => {
+                        console.log('saved', saved);
                         const tasks = this.state.tasks;
                         tasks.push(saved);
                         taskList.update({ tasks });
@@ -28,6 +30,8 @@ class TODOList extends Component {
 
         getTasks()
             .then(tasks => {
+                this.state.tasks = tasks;
+                console.log(tasks);
                 taskList.update({ tasks });
             });
 
