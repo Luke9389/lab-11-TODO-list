@@ -17,8 +17,6 @@ class TaskForm extends Component {
                 completed: false
             };
 
-            console.log(taskToAdd);
-
             error.textContent = '';
 
             onAdd(taskToAdd)

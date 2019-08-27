@@ -5,9 +5,10 @@ class TaskList extends Component {
 
     onRender(list) {
         const tasks = this.props.tasks;
+        const onUpdate = this.props.onUpdate;
         
         tasks.forEach(task => {
-            const taskItem = new TaskItem({ task });
+            const taskItem = new TaskItem({ task, onUpdate });
             list.appendChild(taskItem.renderDOM());
         });
 

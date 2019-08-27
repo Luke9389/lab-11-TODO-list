@@ -15,3 +15,7 @@ button {
     font-size: 2rem;
     color: black
 }
+
+.complete {
+    text-decoration: line-through;
+}
