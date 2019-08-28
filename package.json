@@ -8,7 +8,7 @@
     "pretest": "npm run lint",
     "test": "cd public && npm i esm jsdom && npx qunit test/index.js",
     "start": "node server.js",
-    "start:watch": "nodemon server.js --ignore public",
+    "start-watch": "nodemon server.js --ignore public",
     "create-tables": "node data/create-tables.js",
     "drop-tables": "node data/drop-tables.js",
     "load-seed-data": "node data/load-seed-data.js",

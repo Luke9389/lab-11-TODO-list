@@ -32,7 +32,6 @@ app.get('/api/tasks', (req, res) => {
                 error: err.message || err
             });
         });
-
 });
 
 app.post('/api/tasks', (req, res) => {
