@@ -36,6 +36,7 @@ app.get('/api/tasks', (req, res) => {
 
 app.post('/api/tasks', (req, res) => {
     const task = req.body;
+    
     client.query(`
         INSERT INTO tasks (name, completed)
         VALUES ($1, $2)
