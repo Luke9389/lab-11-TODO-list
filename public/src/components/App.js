@@ -11,7 +11,6 @@ class TODOList extends Component {
 
         const taskForm = new TaskForm({
             onAdd: task => {
-                console.log(task);
                 return addTask(task)
                     .then(saved => {
                         const tasks = this.state.tasks;
